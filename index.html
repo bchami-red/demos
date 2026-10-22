@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Hub</title>
+  <style>
+    :root { --bg: #f7f7f8; --fg: #1a1a1a; --muted: #666; --card: #fff; --accent: #e2401b; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121212; --fg: #f0f0f0; --muted: #aaa; --card: #1e1e1e; }
+    }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--fg); }
+    main { max-width: 640px; margin: 64px auto; padding: 0 16px; }
+    h1 { margin-bottom: 4px; }
+    p { color: var(--muted); }
+    .card { background: var(--card); border-radius: 12px; padding: 20px; margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+    button { background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 10px 18px; font-size: 16px; cursor: pointer; }
+    #count { font-size: 32px; font-weight: 600; margin-left: 16px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Demo Hub</h1>
+    <p>My first demo published with GitHub Pages.</p>
+    <div class="card">
+      <button id="btn">Click me</button>
+      <span id="count">0</span>
+    </div>
+  </main>
+  <script>
+    let n = 0;
+    document.getElementById('btn').onclick = () => {
+      document.getElementById('count').textContent = ++n;
+    };
+  </script>
+</body>
+</html>
